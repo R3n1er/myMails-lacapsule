@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+
+}
+
+#container{
+    background-color: white;
+    border-color: black;
+    border: 1px;
+    width: auto;
+}
+
+#box-message{
+    display: flex;
+
+}
+
+.profilepic{
+    width: 150px;
+    height: 150px;
+}
