@@ -2,9 +2,16 @@ body{
     margin: 0;
     padding: 0;
     background-color: lightgrey;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
-
+h6{
+    font-size: 14px;
+    margin: 0px;
+}
 #container{
     background-color: white;
     border-color: black;
@@ -12,12 +19,31 @@ body{
     width: auto;
 }
 
-#box-message{
+.row{
     display: flex;
-
+    align-items: center;
+    width: 50%;
+    background-color: whitesmoke;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
 }
 
-.profilepic{
-    width: 150px;
-    height: 150px;
+.last-row{
+    border-bottom: 1px solid grey;
+}
+
+.avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.trash{
+    width: 18px;
+    height: 18px;
+    margin: 15px;
+    /* prendre le maximum de marge à droite */
+    padding-left: auto;
 }
