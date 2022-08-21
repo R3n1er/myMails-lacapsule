@@ -12,12 +12,6 @@ h6{
     font-size: 14px;
     margin: 0px;
 }
-#container{
-    background-color: white;
-    border-color: black;
-    border: 1px;
-    width: auto;
-}
 
 .row{
     display: flex;
@@ -29,6 +23,7 @@ h6{
     border-right: 1px solid grey;
 }
 
+/* hack pour gérer la bordure du dernier message */
 .last-row{
     border-bottom: 1px solid grey;
 }
