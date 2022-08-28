@@ -49,7 +49,7 @@ document.getElementById("btn-add").addEventListener("click", function () {
   let trash = document.createElement("img");
   trash.src = "./assets/trash.png";
   trash.className = "trash";
-  mainDiv.appendChild(trash);
+  mainDiv.appendChild(trash); // attention elle n'est pas clickable à ce moment
 
   // Vider le champ de saisie après l'ajout d'un message
   document.getElementById("add-message").value = "";
@@ -57,4 +57,14 @@ document.getElementById("btn-add").addEventListener("click", function () {
   // Mettre à jour le nombre de message après l'ajout d'un message
   let messagesCount = document.getElementsByTagName("h6").length;
   document.getElementById("countMessages").textContent = messagesCount;
+
+  // Ajouter une nouvelle écoute sur la nouvelle corbeille créée
+    trash.addEventListener('click',
+        function(){ //fonction de callback
+            this.parentNode.remove();
+            // Mettre a jour le nombre de messages
+            let messagesCount = document.getElementsByTagName("h6").length;
+            document.getElementById("countMessages").textContent =
+              messagesCount;
+        })
 });
