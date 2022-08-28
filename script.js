@@ -23,6 +23,7 @@ document.getElementById("btn-add").addEventListener("click", function () {
   console.log(document.getElementById("add-message").value);
   // Création d'un élément DIV afin d'ajouter un nouveau message
   var mainDiv = document.createElement("div");
+  mainDiv.className = "row";
   document.body.appendChild(mainDiv); //Ajouter l'element à la fin du body
 
   // Ajouter l'image de profil
@@ -33,26 +34,26 @@ document.getElementById("btn-add").addEventListener("click", function () {
 
   // Ajouter la div qui comprendra le message
   var mainMessageDIV = document.createElement("div");
-  mainDiv.appendChild(nameMessageDiv);
+  mainDiv.appendChild(mainMessageDIV);
 
   // Ajout du titre H6 de l'auteur
-  let h6 = document.createElement("h6");
+  var h6 = document.createElement("h6");
   h6.textContent = "Eric Dupont";
-  nameMessageDiv.appendChild(h6);
+  mainMessageDIV.appendChild(h6);
 
   // Ajout du texte
   var content = document.createElement("p");
   content.textContent = document.getElementById("add-message").value;
-  nameMessageDiv.appendChild(content);
+  mainMessageDIV.appendChild(content);
 
   // Ajout de la corbeille
-  let trash = document.createElement("img");
+  var trash = document.createElement("img");
   trash.src = "./assets/trash.png";
   trash.className = "trash";
   mainDiv.appendChild(trash); // attention elle n'est pas clickable à ce moment
 
   // Vider le champ de saisie après l'ajout d'un message
-  document.getElementById("add-message").value = "";
+  document.getElementById("add-message").value = " ";
 
   // Mettre à jour le nombre de message après l'ajout d'un message
   let messagesCount = document.getElementsByTagName("h6").length;
