@@ -42,3 +42,22 @@ h6{
     /* prendre le maximum de marge à droite */
     padding-left: auto;
 }
+
+#add-message{
+    margin-right: 15px;
+    width: 85%;
+    padding: 8px 5px;
+}
+
+/* Focus lors du clic avec outline (ligne atour de l'input) */
+#add-message:focus{
+    outline: 0;
+}
+
+#btn-add{
+    border-color: blue;
+    border-radius: 5px;
+    color: blue;
+    font-size: 16px;
+    padding: 6px;
+}
